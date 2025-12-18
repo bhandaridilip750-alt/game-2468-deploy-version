@@ -1,0 +1,45 @@
+.tile {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  user-select: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  box-shadow: 0 0 0 3px #edc22e, 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.selected {
+  box-shadow: 0 0 0 4px #edc22e, 0 6px 12px rgba(237, 194, 46, 0.4);
+}
+
+.value {
+  position: relative;
+  z-index: 2;
+}
+
+.mergePulse {
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.selectedRing {
+  position: absolute;
+  inset: -4px;
+  border: 3px solid #edc22e;
+  border-radius: 12px;
+  pointer-events: none;
+}

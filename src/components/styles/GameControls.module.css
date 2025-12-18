@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.button {
+    flex: 1;
+    padding: 14px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.button:hover:not(:disabled) {
+    background-color: var(--button-hover);
+    transform: translateY(-1px);
+}
+
+.button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.undoButton {
+    background-color: var(--score-bg);
+}
+
+.undoButton:hover:not(:disabled) {
+    background-color: var(--button-hover);
+}

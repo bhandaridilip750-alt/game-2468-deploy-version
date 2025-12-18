@@ -1,0 +1,124 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--overlay-bg);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 20px;
+}
+
+.modal {
+    background: var(--modal-bg);
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s ease;
+}
+
+.title {
+    font-size: 72px;
+    font-weight: bold;
+    color: var(--foreground);
+    margin: 0;
+    line-height: 1;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: var(--foreground);
+    opacity: 0.7;
+    margin: 8px 0 32px 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.label {
+    font-size: 14px;
+    color: var(--foreground);
+    text-align: left;
+}
+
+.input {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    border: 2px solid var(--input-border);
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s ease;
+    box-sizing: border-box;
+    background: var(--background);
+    color: var(--foreground);
+}
+
+.input:focus {
+    border-color: var(--input-focus);
+}
+
+.input::placeholder {
+    color: var(--input-border);
+}
+
+.button {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #edc22e 0%, #f2b179 100%);
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(237, 194, 46, 0.4);
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.howToPlay {
+    text-align: left;
+    background: var(--cell-bg);
+    border-radius: 8px;
+    padding: 16px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.howToPlay h3 {
+    font-size: 14px;
+    color: var(--foreground);
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.howToPlay ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+
+.howToPlay li {
+    font-size: 13px;
+    color: var(--foreground);
+    opacity: 0.8;
+    line-height: 1.6;
+}

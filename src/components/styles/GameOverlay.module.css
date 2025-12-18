@@ -1,0 +1,111 @@
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--overlay-bg);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    border-radius: 8px;
+}
+
+.content {
+    background: var(--modal-bg);
+    border-radius: 12px;
+    padding: 32px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    max-width: 280px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+}
+
+.winTitle {
+    color: #edc22e;
+}
+
+.overTitle {
+    color: var(--foreground);
+}
+
+.score {
+    font-size: 14px;
+    color: var(--foreground);
+    opacity: 0.8;
+    margin: 0 0 20px 0;
+}
+
+.finalScore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--score-bg);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.scoreLabel {
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--score-label);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.scoreValue {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--score-text);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.continueButton {
+    width: 100%;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #edc22e 0%, #f2b179 100%);
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.continueButton:hover {
+    transform: translateY(-1px);
+}
+
+.newGameButton {
+    width: 100%;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 6px;
+    background: var(--button-bg);
+    color: var(--button-text);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.newGameButton:hover {
+    transform: translateY(-1px);
+    background: var(--button-hover);
+}

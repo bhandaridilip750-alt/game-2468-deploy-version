@@ -1,0 +1,204 @@
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+/* ===== WARM AMBER GOLD THEME ===== */
+
+/* Active indicator - Energy Ribbon style */
+.activeIndicator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    /* Glass effect with amber tint */
+    background: rgba(242, 201, 76, 0.18);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(242, 201, 76, 0.35);
+    border-radius: 10px;
+    color: #F5E6B3;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 16px rgba(242, 201, 76, 0.15);
+}
+
+.cancelBtn {
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.2);
+    color: #F5E6B3;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.cancelBtn:hover {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.powerUps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+/* Power-up buttons - Warm Amber Gold inactive state */
+.powerUpBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 8px;
+    /* Dark slate background - dormant but potent */
+    background: linear-gradient(180deg, #2B2F45, #24283A);
+    border: 1px solid rgba(242, 201, 76, 0.15);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+/* Hover state - subtle energy */
+.powerUpBtn:hover:not(:disabled) {
+    border-color: rgba(242, 201, 76, 0.35);
+    box-shadow: 0 0 12px rgba(242, 201, 76, 0.2);
+}
+
+.powerUpBtn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+/* Active state - Warm Amber Gold glow */
+.powerUpBtn.active {
+    background: linear-gradient(180deg, #F5D97A, #E8B94E);
+    border-color: rgba(242, 201, 76, 0.6);
+    box-shadow:
+        0 0 24px rgba(242, 201, 76, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.powerUpBtn.active .icon,
+.powerUpBtn.active .name {
+    color: #2C2A1F;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 18px rgba(242, 201, 76, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    }
+
+    50% {
+        box-shadow: 0 0 28px rgba(242, 201, 76, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    }
+
+    100% {
+        box-shadow: 0 0 18px rgba(242, 201, 76, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    }
+}
+
+/* Icon style - muted until active */
+.icon {
+    font-size: 20px;
+    font-weight: bold;
+    color: #9FA4C4;
+    transition: color 0.2s ease, filter 0.2s ease;
+}
+
+.powerUpBtn:hover:not(:disabled) .icon {
+    color: #E6D18A;
+    filter: drop-shadow(0 0 4px rgba(242, 201, 76, 0.4));
+}
+
+.powerUpBtn.active .icon {
+    filter: drop-shadow(0 0 6px rgba(242, 201, 76, 0.6));
+}
+
+.name {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #9FA4C4;
+    transition: color 0.2s ease;
+}
+
+.powerUpBtn:hover:not(:disabled) .name {
+    color: #E6D18A;
+}
+
+/* Lives badge - Amber accent */
+.lives {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(180deg, #F5D97A, #E8B94E);
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: bold;
+    color: #2C2A1F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(242, 201, 76, 0.4);
+}
+
+/* ===== OLD THEME (Commented for reference) ===== */
+/*
+.powerUpBtn {
+  background: var(--score-bg);
+  border: 2px solid transparent;
+}
+.powerUpBtn.active {
+  border-color: #edc22e;
+  background: var(--button-hover);
+}
+.icon { color: var(--score-text); }
+.name { color: var(--score-label); }
+.lives {
+  background: linear-gradient(135deg, #edc22e 0%, #f2b179 100%);
+  color: #fff;
+}
+*/
+
+/* Small screens */
+@media (max-width: 400px) {
+    .container {
+        padding: 0;
+    }
+
+    .powerUpBtn {
+        padding: 10px 4px;
+    }
+
+    .icon {
+        font-size: 16px;
+    }
+
+    .name {
+        font-size: 9px;
+    }
+
+    .lives {
+        width: 18px;
+        height: 18px;
+        font-size: 10px;
+    }
+
+    .activeIndicator {
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+}

@@ -1,0 +1,28 @@
+.toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 12px;
+    background: var(--score-bg);
+    color: var(--score-text);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.toggle:hover {
+    background: var(--button-hover);
+}
+
+.iconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 22px;
+    height: 22px;
+}

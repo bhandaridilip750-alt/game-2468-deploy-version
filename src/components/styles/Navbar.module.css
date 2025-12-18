@@ -1,0 +1,54 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: var(--background);
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.titleLink {
+    text-decoration: none;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--foreground);
+    margin: 0;
+    letter-spacing: -1px;
+    transition: opacity 0.2s ease;
+}
+
+.titleLink:hover .title {
+    opacity: 0.8;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.newGameBtn {
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    background: var(--button-bg);
+    color: var(--button-text);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.newGameBtn:hover {
+    background: var(--button-hover);
+    transform: translateY(-1px);
+}

@@ -1,0 +1,90 @@
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.playerInfo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    color: var(--foreground);
+}
+
+.greeting {
+    opacity: 0.7;
+}
+
+.playerName {
+    font-weight: bold;
+}
+
+.difficulty {
+    margin-left: 8px;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    background: rgba(242, 201, 76, 0.2);
+    color: #E8B94E;
+    border-radius: 4px;
+}
+
+.scores {
+    display: flex;
+    gap: 8px;
+}
+
+.scoreBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--score-bg);
+    border-radius: 6px;
+    padding: 8px 16px;
+    min-width: 70px;
+    transition: background-color 0.3s ease;
+}
+
+.scoreLabel {
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--score-label);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.scoreValue {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--score-text);
+}
+
+/* Mobile responsive */
+@media (max-width: 400px) {
+    .container {
+        padding: 0;
+    }
+
+    .playerInfo {
+        font-size: 14px;
+    }
+
+    .scoreBox {
+        padding: 6px 12px;
+        min-width: 60px;
+    }
+
+    .scoreValue {
+        font-size: 18px;
+    }
+
+    .scoreLabel {
+        font-size: 10px;
+    }
+}
